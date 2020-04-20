@@ -2,6 +2,71 @@ table, th, td {
     border: 1px solid black;
 }
 
+td {
+    width: 100px;
+    height: 100px;
+}
+
 .emptySpace {
     background-color: black;
+}
+
+.ballroomImg {
+    background-image: url(img/ballroom.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.billiardImg {
+    background-image: url(img/billiard.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.clueImg {
+    background-image: url(img/clue.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.conservatoryImg {
+    background-image: url(img/conservatory.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.diningImg {
+    background-image: url(img/dining.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hallImg {
+    background-image: url(img/hall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hallwayImg {
+    background-image: url(img/hallway.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.kitchenImg {
+    background-image: url(img/kitchen.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.studyImg {
+    background-image: url(img/study.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.libraryImg {
+    background-image: url(img/library.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
