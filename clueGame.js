@@ -68,14 +68,6 @@ function getCoordinates() {
 
 }
 
-function isRoom() {
-
-}
-
-function isOccupied() {
-
-}
-
 function hasSecretPassage() {
 
 }
