@@ -3,12 +3,34 @@ table, th, td {
 }
 
 td {
-    width: 100px;
+    width: 150px;
     height: 100px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+  }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.textarea {
+    height: 500px;
+    width: 400px;
+    overflow-y: scroll;
 }
 
 .emptySpace {
     background-color: black;
+}
+
+.playerImg {
+    width: 50px;
+    height: 50px
 }
 
 .ballroomImg {
