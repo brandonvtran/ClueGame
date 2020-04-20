@@ -45,17 +45,17 @@ function endTurn(id) {
         nextPlayerNum = 1;
     else
         nextPlayerNum = playerNum + 1;
-    document.getElementById(`player${nextPlayerNum}`).innerHTML = `<h3>Your Turn</h3><button onclick='makeAccusation()'>Accuse</button><br/><button onclick='makeSuggestion()'>Suggest</button><br/><button id='p${nextPlayerNum}Turn' onclick='endTurn(this.id)'>End Turn</button><br/><br/>`;
+    document.getElementById(`player${nextPlayerNum}`).innerHTML = `<h3>Your Turn</h3><button onclick='makeAccusation(${nextPlayerNum})'>Accuse</button><br/><button onclick='makeSuggestion(${nextPlayerNum})'>Suggest</button><br/><button id='p${nextPlayerNum}Turn' onclick='endTurn(this.id)'>End Turn</button><br/><br/>`;
     document.getElementById(`player${playerNum}`).innerHTML = '';
     displayMessage(`Player ${playerNum} ended their turn`);
 }
 
-function makeAccusation() {
-    displayMessage("Player made an accusation");
+function makeAccusation(playerNum) {
+    displayMessage(`Player ${playerNum} made an accusation`);
 }
 
-function makeSuggestion() {
-    displayMessage("Player made a suggestion");
+function makeSuggestion(playerNum) {
+    displayMessage(`Player ${playerNum} made a suggestion`);
 }
 
 function win() {
