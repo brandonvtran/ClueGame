@@ -11,17 +11,18 @@ function isPlayersTurn() {
     if (document.getElementById("p5Turn"))
         return 'p5';
     if (document.getElementById("p6Turn"))
-        return '6';
+        return 'p6';
 }
 
 function movementAction(el) {
-    const playerImg = "<img id='p1' class='playerImg' src='img/p1.png'/>";
+    const playerNum = isPlayersTurn().charAt(1);
+    const playerImg = `<img id=${isPlayersTurn()} class='playerImg' src='img/${isPlayersTurn()}.png'/>`;
     if (movementAllowed(el)) {
-        if (document.getElementById('p1')) {
-            document.getElementById('p1').remove();
+        if (document.getElementById(`${isPlayersTurn()}`)) {
+            document.getElementById(`${isPlayersTurn()}`).remove();
         }
         document.getElementById(el).innerHTML = playerImg;
-        displayMessage(`Player moved to ${el}`);
+        displayMessage(`Player ${playerNum} moved to ${el}`);
     }
 }
 
@@ -39,10 +40,14 @@ function displayMessage(message) {
 
 function endTurn(id) {
     const playerNum = parseInt(id.charAt(1), 10);
-    const nextPlayerNum = playerNum + 1;
+    let nextPlayerNum;
+    if (playerNum === 6)
+        nextPlayerNum = 1;
+    else
+        nextPlayerNum = playerNum + 1;
     document.getElementById(`player${nextPlayerNum}`).innerHTML = `<h3>Your Turn</h3><button onclick='makeAccusation()'>Accuse</button><br/><button onclick='makeSuggestion()'>Suggest</button><br/><button id='p${nextPlayerNum}Turn' onclick='endTurn(this.id)'>End Turn</button><br/><br/>`;
     document.getElementById(`player${playerNum}`).innerHTML = '';
-    displayMessage(`Player${playerNum} ended their turn`);
+    displayMessage(`Player ${playerNum} ended their turn`);
 }
 
 function makeAccusation() {
